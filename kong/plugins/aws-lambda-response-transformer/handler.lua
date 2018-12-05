@@ -162,7 +162,7 @@ function AWSLambdaStatusCodeHandler:access(conf)
         -- As we're changing the body size, we can't set this header.
         headers['Content-Length'] = nil
         body = cjson.decode(t_body)
-        body = body .. "x"
+        body = cjson.decode(t_body)
       end
     end
   end
